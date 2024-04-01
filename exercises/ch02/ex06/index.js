@@ -1,0 +1,1 @@
+export function fizzbuzz (){let fizzbuzzStr = "";for(let i=1;i<=100;i++){fizzbuzzStr+=((i%3?'':'Fizz')+(i%5?'':'Buzz')||i);fizzbuzzStr+="\n"}return fizzbuzzStr}
