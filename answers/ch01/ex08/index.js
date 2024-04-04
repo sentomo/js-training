@@ -21,7 +21,7 @@ class Histogram {
   }
 
   add(text) {
-    text = text.replace(/¥s/g, "").toUpperCase();
+    text = text.replace(/\s/g, "").toUpperCase();
 
     for(let character of text) {
       let count = this.letterCounts.get(character);
