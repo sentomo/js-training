@@ -20,7 +20,7 @@ class Histogram {
   }
 
   add(text) {
-    text = text.replace(/¥s/g, "").toUpperCase();
+    text = text.replace(/\s/g, "").toUpperCase();
 
     for (let character of text) {
       let count = this.letterCounts.get(character);
@@ -47,7 +47,7 @@ class Histogram {
     entries = entries.filter((entry) => entry[1] >= 1);
 
     let lines = entries.map(
-      ([l, n]) => `${l}: ${"#".repeat(Math.round(n))} ${n.toFixed(2)}%`,
+      ([l, n]) => `${l}: ${"#".repeat(Math.round(n))} ${n.toFixed(2)}%`
     );
 
     return lines.join("\n");
