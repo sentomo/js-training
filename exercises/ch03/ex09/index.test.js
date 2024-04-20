@@ -1,6 +1,6 @@
 test("テスト名を適切につけてなさい", () => {
   let points = [{x:1, y:2}, {x:3, y:4}];
-  let [{x:x1=0, y:y1=0}, {x:x2=0, y:y2=0}] = points;
+  let [{x:x1, y:y1}, {x:x2, y:y2}] = points;
   expect(x1).toBe(1);
   expect(y1).toBe(2);
   expect(x2).toBe(3);

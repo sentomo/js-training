@@ -15,7 +15,7 @@
 // }
 // console.log(i);
 
-for (i = 0; i < 10; i++) {
+for (var i = 0; i < 10; i++) {
   (function () {
     i = 100;
   })();
