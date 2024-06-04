@@ -7,7 +7,6 @@ export function restrict(target, template) {
       delete target[key];
     }
   }
-  console.log(JSON.stringify(target));
   return target;
 }
 
