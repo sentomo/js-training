@@ -25,8 +25,8 @@ export function Warrior(atk) {
   this.atk = atk;
 }
 
-Warrior.prototype = {
-  attack: function() {
+Warrior.prototype = { // prototype全体を上書きしてしまっているのNG Warrior.prototype.attack = { }としないといけない
+  attack: function() { //constructorプロパティを前提にしたコードが入っていない　
     return this.atk * 2;
   }
 }

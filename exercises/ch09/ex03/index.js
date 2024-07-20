@@ -10,14 +10,15 @@ export class C1 {
 // クロージャを使った時
 export class C2 {
   constructor() {
-    this._x = 42; 
+    const x = 42;
+    // this._x = 42; 
 
     this.getX = function() {
-      return this._x;
+      return x;
     };
   }
 
-  get x() {
-    return this.getX();
-  }
+  // get x() {
+  //   return this.getX();
+  // }
 }

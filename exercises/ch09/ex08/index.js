@@ -7,7 +7,7 @@ export class AlarmClock {
     return this.state;
   }
 
-  setState(newState) {
+  setState(newState) { // 本来の仕様を変えてしまっている。setStateを使っていると、通常スタートしなくてもいきなり任意のstateに飛べてしまう
     this.state = newState;
   }
 

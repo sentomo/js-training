@@ -14,10 +14,10 @@ describe("getAllUniqueAndInheritedProperties test", () => {
     const result = getAllUniqueAndInheritedProperties(obj);
     const expected = [
       "notEmurableProperty",
-      Symbol("symbolProperty"),
+      Symbol("symbolProperty"), //resultで定義したオブジェクトを直接指定した方が良い
       "inheritedProperty",
     ];
-    expect(JSON.stringify(result)).toStrictEqual(JSON.stringify(expected));
+    expect(JSON.stringify(result)).toStrictEqual(JSON.stringify(expected)); //  Symbolは一意のものを返す　JSON.stringifyではなく、toStrictEqualでそのままobjの機構同士を比較
   });
 
   it("空オブジェクトを渡した時、プロパティの配列のlengthは0が返る", () => {
