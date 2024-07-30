@@ -1,11 +1,30 @@
-// f はオブジェクトを1つ引数に取る関数
-function cache(f) {
-  // この関数を実装する
+export function cache(f) {
+  const cacheMap = new WeakMap();
+
+  return function(obj) {
+    if (typeof obj !== 'object') {
+      throw new Error("Invalid value used as weak map key");
+    }
+
+    if (cacheMap.has(obj)) {
+      return cacheMap.get(obj);
+    } else {
+      const result = f(obj);
+      cacheMap.set(obj, result);
+      return result;
+    }
+  };
 }
 
-function slowFn(obj) {
-  // 時間のかかる処理
+// 時間のかかる処理の例
+export function slowFn(obj) {
+  // 例として、計算をシミュレーションするための遅延
+  let sum = 0;
+  for (let i = 0; i < 1e7; i++) {
+    sum += i;
+  }
+  return sum + JSON.stringify(obj);
 }
 
-// cachedSlowFnを同じ引数で複数回呼び出すと、2回目以降はキャッシュが返る
+// キャッシュ機能を持った関数の生成
 const cachedSlowFn = cache(slowFn);
