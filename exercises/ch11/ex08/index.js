@@ -1,0 +1,1 @@
+console.log(/^(a|aa)+$/.test("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa!"));
