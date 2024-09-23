@@ -15,7 +15,7 @@ export function fibonacciSequence() {
     next() {
         const value = y;
         [x, y] = [y, x + y]; // 分割代入を行っている。
-        return { value, done: false }; // done: falseを返すことでイテレータが終了しない
+        return { value: value, done: false }; // done: falseを返すことでイテレータが終了しない
     }
   };
 }

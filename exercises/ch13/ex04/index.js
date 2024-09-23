@@ -7,9 +7,9 @@ export function fetchFirstFileSize(path) {
       if (files.length === 0) {
         return null;  // ディレクトリが空の場合は null を返す
       }
-      return fsPromises.stat(join(path, files[0]));
+      return fsPromises.stat(join(path, files[0])).then(stats => stats ? stats.size : null); // とした方がスッキリするかも
     })
-    .then(stats => stats ? stats.size : null);
+    // .then(stats => stats ? stats.size : null);
 }
 
 export function fetchSumOfFileSizes(path) {

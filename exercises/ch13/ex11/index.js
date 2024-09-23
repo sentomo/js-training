@@ -5,8 +5,8 @@ export function retryWithExponentialBackoff(func, maxRetry) {
   function retry() {
     return func()
       .then(result => {
-        if (result === true) { // 成功した場合、Promiseを解決する
-          return true;
+        if (result) { // 成功した場合、Promiseを解決する
+          return result; // trueじゃなくて通信の結果responseを返して欲しい
         } else if (retryCount < maxRetry) { // 失敗した場合、リトライする
           retryCount++;
           const delay = Math.pow(2, retryCount - 1) * 1000; // 指数バックオフ時間計算
@@ -36,6 +36,6 @@ export function retryWithExponentialBackoff(func, maxRetry) {
 
   // 初回の試行を開始し、結果に応じてPromiseを返す
   return retry()
-    .then(() => true) // 成功した場合はtrueを返す
+    .then(result => result) // 成功した場合はtrueを返す→ trueじゃなくて通信の結果responseを返して欲しい
     .catch(() => Promise.reject(false)); // 失敗した場合はrejectとしてfalseを返す
 }
