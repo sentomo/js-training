@@ -1,4 +1,4 @@
 {
-  "name": "Taro",
+  "name": "<img src=x onerror='alert(\"XSS攻撃が発生しました！\")'>",
   "age": 50
 }

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Import Example</title>
+</head>
+<body>
+    <h1>動的インポートのテスト</h1>
+    <button id="loadScript">スクリプトをロード</button>
+    <script type="module">
+        document.getElementById('loadScript').addEventListener('click', async () => {
+            try {
+                const module = await import('https://test-site-sentomo.netlify.app/module.js');
+                module.hello();
+            } catch (error) {
+                console.error('Error loading module:', error);
+            }
+        });
+    </script>
+</body>
+</html>

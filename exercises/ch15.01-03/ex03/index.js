@@ -1,0 +1,1 @@
+console.log("This script is safe and loaded correctly");
