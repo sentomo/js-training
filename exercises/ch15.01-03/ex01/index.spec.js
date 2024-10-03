@@ -46,7 +46,7 @@ function queryToDo(page, index) {
 
 test.describe("simple todo app", () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto("/ch15.01-03/ex01");
+    await page.goto("https://127.0.0.1:5500/exercises/ch15.01-03/ex01");
   });
 
   test("no default todos", async ({ page }) => {

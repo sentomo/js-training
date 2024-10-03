@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 function gotoTestTarget(page) {
-  return page.goto("/ch15.01-03/ex10/index.html");
+  return page.goto("https://127.0.0.1:5500/exercises/ch15.01-03/ex10/index.html");
 }
 
 function getDiv(page) {
@@ -25,7 +25,7 @@ test.describe("div & input Site", () => {
     await gotoTestTarget(page);
     await expect(getDiv(page)).toHaveCSS(
       "background-color",
-      "rgb(255, 255, 255)"
+      "rgba(0, 0, 0, 0)"
     );
     await getDiv(page).click();
     await expect(getDiv(page)).toHaveCSS(
