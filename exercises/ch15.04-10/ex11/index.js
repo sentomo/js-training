@@ -45,4 +45,19 @@ form.addEventListener("submit", (e) => {
 
 window.addEventListener("hashchange", () => {
   // ここを実装してね
+  const hash = window.location.hash;
+  let filteredTodos;
+
+  if (hash === "#/active") {
+    // 未完了のToDoのみ表示
+    filteredTodos = todos.filter((todo) => !todo.completed);
+  } else if (hash === "#/completed") {
+    // 完了済みのToDoのみ表示
+    filteredTodos = todos.filter((todo) => todo.completed);
+  } else {
+    // 全てのToDoを表示
+    filteredTodos = todos;
+  }
+
+  renderTodos(filteredTodos);
 });
