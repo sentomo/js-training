@@ -18,10 +18,9 @@ form.addEventListener("submit", (e) => {
   const destroy = clone.querySelector("button");
 
   toggle.addEventListener("change", () => {
-    li.classList.toggle("line-through", toggle.checked); // ChatGPTで変更した箇所
-    li.classList.toggle("text-gray-400", toggle.checked); // ChatGPTで変更した箇所
+    // IMPORTANT: ChatGPT にはこの関数内のコードのみ変更してもらうこと
+    li.classList.toggle("completed", toggle.checked);
   });
-
   label.textContent = todo;
   destroy.addEventListener("click", () => {
     li.remove();
