@@ -1,0 +1,120 @@
+/* .completed {
+  text-decoration: line-through;
+} */
+
+/* 全体の余白やボックスサイズをリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* 黒背景と中央配置でパンダの黒色を再現 */
+body {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* フォームの整列と要素間のスペースを調整 */
+#new-todo-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* テキスト入力欄のデザイン（白背景や丸みを持たせてパンダを再現） */
+#new-todo {
+  padding: 10px;
+  width: 250px;
+  border: 2px solid #dcdcdc;
+  border-radius: 20px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
+}
+
+/* プレースホルダーテキストの色をソフトなグレーで表示 */
+#new-todo::placeholder {
+  color: #888;
+}
+
+/* 追加ボタンのデザイン（笹の色、白縁取り、白文字、マウスオーバー時に0.1秒かけて拡大するアニメーションを再生） */
+button {
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+/* ボタンをホバーした時にボタンのスケールを1.1倍に */
+button:hover {
+  transform: scale(1.1);
+}
+
+/* ToDoリストのリストスタイルを消去し、幅を300pxに */
+#todo-list {
+  list-style-type: none;
+  width: 300px;
+  padding: 0;
+}
+
+/* 各ToDoアイテムのスタイル（白背景、黒枠、角を丸くして、グレーの影を表示） */
+li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 10px 15px;
+  border: 2px solid #333;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  box-shadow: 2px 2px #444;
+}
+
+/* 完了済みのToDoアイテムに打ち消し線を付ける */
+.completed .content {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* チェックボックスのデザイン(背景を笹の色に) */
+.toggle {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #4caf50;
+}
+
+/* タスク内容のラベルのデザイン(文字を黒に、フレックスコンテナ内で均等にスペースを分配) */
+.content {
+  font-size: 1rem;
+  color: #333;
+  margin-left: 10px;
+  flex: 1;
+}
+
+/* 削除ボタンのデザイン(背景をオレンジに、ボタンに丸みを持たせる、マウスオーバー時に0.1秒かけて拡大するアニメーションを再生) */
+.destroy {
+  background-color: #f4a236;
+  border: 2px solid #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: transform 0.1s ease;
+}
+
+/* ボタンをホバーした時にボタンのスケールを1.2倍に */
+.destroy:hover {
+  transform: scale(1.2);
+}
