@@ -2,35 +2,60 @@ const form = document.querySelector("#new-todo-form");
 const list = document.querySelector("#todo-list");
 const input = document.querySelector("#new-todo");
 
+// Session storage のキー
+const STORAGE_KEY = "todo-app-tasks";
+
+// SessionStorage の利用可否を確認する関数
+function isSessionStorageAvailable() {
+  try {
+    sessionStorage.setItem("__test__", "__test__");
+    sessionStorage.removeItem("__test__");
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+const sessionStorageAvailable = isSessionStorageAvailable();
+let tasks = []; // タスクのリストを管理
+
 document.addEventListener("DOMContentLoaded", async () => {
   // TODO: ここで API を呼び出してタスク一覧を取得し、
   // 成功したら取得したタスクを appendToDoItem で ToDo リストの要素として追加しなさい
   // ============追加ここから==========
-  fetch("/api/tasks", { 
-    method: 'GET',
-    headers: { "Content-Type": "application/json; charset=UTF-8" }})
-    .then(response => {
-        if (response.ok &&    // 成功しているか、想定している種類のデータかを確認する。
-            response.headers.get("Content-Type") === "application/json; charset=UTF-8") {
-            return response.json();
-        } else {
-          const errorMsg = `Unexpected response status ${response.status} or content type`;
-          alert(errorMsg);
-            throw new Error(
-                `Unexpected response status ${response.status} or content type`
-            );
-        }
-    })
-    .then(data => {
-        data.items.forEach(task => { // 登録済みのタスクを追加する。
-          appendToDoItem(task);
-        });
-    })
-    .catch(error => { 
-        alert("Error while fetching current task list:", error);
-    });
-    // ============追加ここまで==========
+  if (sessionStorageAvailable) {
+    // セッションストレージからデータを読み込む
+    const storedTasks = sessionStorage.getItem(STORAGE_KEY);
+    if (storedTasks) {
+      tasks = JSON.parse(storedTasks);
+    }
+  }
+
+  // タスクを表示
+  tasks.forEach((task) => appendToDoItem(task));
+
+//   // 他のタブの変更を検知→sessionStorageでは無効
+//   if (sessionStorageAvailable) {
+//     window.addEventListener("storage", (event) => {
+//       if (event.key === STORAGE_KEY) {
+//         tasks = JSON.parse(event.newValue || "[]");
+//         updateTodoList();
+//       }
+//     });
+//   }
 });
+
+// タスクの保存
+function saveTasksToSessionStorage() {
+  sessionStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+}
+
+// ToDoリストを更新する
+function updateTodoList() {
+  list.innerHTML = ""; // 現在のリストをクリア
+  tasks.forEach((task) => appendToDoItem(task));
+}
+// ============追加ここまで==========
 
 form.addEventListener("submit", (e) => {
   // TODO: ここで form のイベントのキャンセルを実施しなさい (なぜでしょう？)
@@ -50,20 +75,13 @@ form.addEventListener("submit", (e) => {
   // TODO: ここで API を呼び出して新しいタスクを作成し
   // 成功したら作成したタスクを appendToDoItem で ToDo リストの要素として追加しなさい
   // ============追加ここから==========
-  const newTask = { name: todo };
-  fetch("/api/tasks", {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-    body: JSON.stringify(newTask) })
-    .then (response => {
-      return response.json();
-    })
-    .then (data => {
-      appendToDoItem(data); // Taskオブジェクトが返ってくる
-    })
-    .catch(error => { 
-        alert("Error while fetching current task:", error);
-    });
+  const newTask = { id: Date.now(), name: todo, status: "active" };
+  tasks.push(newTask);
+  appendToDoItem(newTask);
+
+  if (sessionStorageAvailable) {
+    saveTasksToSessionStorage();
+  }
   // ============追加ここまで==========
 
 });
@@ -75,7 +93,8 @@ function appendToDoItem(task) {
 
   const label = document.createElement("label");
   label.textContent = task.name;
-  label.style.textDecorationLine = "none";
+  // label.style.textDecorationLine = "none";
+  label.style.textDecorationLine = task.status === "completed" ? "line-through" : "none";
 
   const toggle = document.createElement("input");
   // TODO: toggle が変化 (change) した際に API を呼び出してタスクの状態を更新し
@@ -83,29 +102,14 @@ function appendToDoItem(task) {
   // ============追加ここから==========
   toggle.type = "checkbox";
 
-  switch (task.status) { // 登録済みのタスクのチェックボックス設定
-    case "completed":
-      toggle.checked = true;
-      break;
-    case "active":
-      toggle.checked = false;
-      break;
-  }
-  label.style.textDecorationLine = toggle.checked ? "line-through" : "none";
+  toggle.checked = task.status === "completed"; // 登録済みのタスクのチェックボックス設定
 
   toggle.addEventListener("change", () => {
-    fetch(`/api/tasks/${task.id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json; charset=UTF-8' },
-      body: JSON.stringify({ id: task.id, status: toggle.checked ? "completed" : "active" }) })
-      .then (response => {
-        if (response.ok) {
-          label.style.textDecorationLine = toggle.checked ? "line-through" : "none";
-        }
-      })
-      .catch(error => { 
-          alert("Error while fetching update task:", error);
-      });
+    task.status = toggle.checked ? "completed" : "active";
+    label.style.textDecorationLine = toggle.checked ? "line-through" : "none";
+    if (sessionStorageAvailable) {
+      saveTasksToSessionStorage();
+    }
   });
   // ============追加ここまで==========
 
@@ -116,17 +120,11 @@ function appendToDoItem(task) {
   destroy.textContent = "❌";
 
   destroy.addEventListener("click", () => {
-    fetch(`/api/tasks/${task.id}`, {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json; charset=UTF-8' } })
-      .then (response => {
-        if (response.ok) {
-          elem.remove();
-        }
-      })
-      .catch(error => { 
-          alert("Error while fetching delete task:", error);
-      });
+    tasks = tasks.filter((t) => t.id !== task.id);
+    elem.remove();
+    if (sessionStorageAvailable) {
+      saveTasksToSessionStorage();
+    }
   });  
   // ============追加ここまで==========
   

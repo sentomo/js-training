@@ -181,11 +181,6 @@ async function deleteTaskHandler(_url, _req, res, params) {
   }
 }
 
-async function nopHandler(_url, _req, res) {
-  res.writeHead(200);
-  res.end();
-}
-
 // "/path/to/file.ext" の URL に対して "./contents/path/to/file.ext" のファイルを返すハンドラ
 async function serveContentsHandler(url, _req, res) {
   const mimeTypes = {
@@ -237,19 +232,6 @@ function cookieAuthzMiddleware(_url, req, res, params) {
     "Set-Cookie",
     `sid=${encodeURIComponent(sid)}; SameSite=Lax; Path=/; HttpOnly;`,
   );
-  return true;
-}
-
-// CORS のヘッダを返すミドルウェア
-function corsMiddleware(_url, _req, res) {
-  // TODO: CORS に必要なヘッダを複数設定する
-  // =====ここから追記======
-  res.setHeader("Access-Control-Allow-Origin", "*"); // 任意のオリジンを許可
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, DELETE, OPTIONS"); // 許可するHTTPメソッド
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization"); // 許可するヘッダー
-  res.setHeader("Access-Control-Allow-Credentials", "true"); // Cookie情報を含める場合
-  // =====ここまで追記======
-  res.setHeader("TODO", "TODO");
   return true;
 }
 
@@ -342,29 +324,20 @@ function routes(...routeHandlers) {
 
 async function main() {
   const authz = cookieAuthzMiddleware;
-  const cors = corsMiddleware;
-
-  http
-    .createServer(async function (req, res) {
-      await routes(["GET", "/*", serveContentsHandler, authz])(req, res);
-    })
-    .listen(3000);
 
   http
     .createServer(async function (req, res) {
       await routes(
-        // TODO: この行のコメントを外す
-        ["OPTIONS", "/api/*", nopHandler, cors],
-        ["GET", "/api/tasks", listTasksHandler, authz, cors],
-        ["GET", "/api/tasks/{id}", getTaskHandler, authz, cors],
-        ["POST", "/api/tasks", createTaskHandler, authz, cors],
-        ["PATCH", "/api/tasks/{id}", patchTaskHandler, authz, cors],
-        ["DELETE", "/api/tasks/{id}", deleteTaskHandler, authz, cors],
+        ["GET", "/api/tasks", listTasksHandler, authz],
+        ["GET", "/api/tasks/{id}", getTaskHandler, authz],
+        ["POST", "/api/tasks", createTaskHandler, authz],
+        ["PATCH", "/api/tasks/{id}", patchTaskHandler, authz],
+        ["DELETE", "/api/tasks/{id}", deleteTaskHandler, authz],
+        ["GET", "/*", serveContentsHandler, authz],
       )(req, res);
     })
-    .listen(3001);
-  console.log("Contents server running at http://localhost:3000/");
-  console.log("API server running at http://localhost:3001/");
+    .listen(3000);
+  console.log("Server running at http://localhost:3000/");
 }
 
 await main();
