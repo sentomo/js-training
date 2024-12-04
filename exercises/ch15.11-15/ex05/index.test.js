@@ -23,8 +23,7 @@ test.describe('ToDoアプリのテスト', () => {
     await page1.goto('http://localhost:3000');
 
     // 2番目のタブを開く
-    const context2 = await browser.newContext();
-    const page2 = await context2.newPage();
+    const page2 = await context1.newPage(); //最初のタブと同じコンテキストでタブを開くことでindexedDBが共有される
     await page2.goto('http://localhost:3000');
 
     // 最初のタブでタスクを追加
@@ -33,17 +32,16 @@ test.describe('ToDoアプリのテスト', () => {
 
     // タスクが2番目のタブにも反映されることを確認
     const taskItemPage2 = await page2.locator('#todo-list li').first();
-    // await expect(taskItemPage2).toHaveText('Task 2❌');
+    await expect(taskItemPage2).toHaveText('Task 2❌');
 
-    // // タスクを2番目のタブで確認し、削除する
-    // await page2.locator('#todo-list li button').click();
+    // タスクを2番目のタブで確認し、削除する
+    await page2.locator('#todo-list li button').click();
 
-    // // 最初のタブにもタスク削除が反映されることを確認
-    // const taskItemPage1 = await page1.locator('#todo-list li').first();
-    // await expect(taskItemPage1).toBeNull();
+    // 最初のタブにもタスク削除が反映されることを確認
+    const taskItemPage1 = await page1.locator('#todo-list li').first();
+    await expect(taskItemPage1).toHaveCount(0);
 
-    // // 両方のタブを閉じる
-    // await context1.close();
-    // await context2.close();
+    // タブを閉じる
+    await context1.close();
   });
 });
