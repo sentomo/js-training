@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>Life Game Client</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <style>
+    #grid {
+      display: grid;
+      grid-template-columns: repeat(50, 20px);
+      grid-template-rows: repeat(50, 20px);
+    }
+    .cell {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+    .cell.alive {
+      background-color: black;
+    }
+    .cell.dead {
+      background-color: white;
+    }
+  </style>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <h1>Life Game</h1>
+  <button id="startButton">Start</button>
+  <button id="pauseButton">Pause</button>
+  <div id="grid"></div>
+</body>
+</html>
