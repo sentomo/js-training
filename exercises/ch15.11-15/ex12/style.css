@@ -1,0 +1,27 @@
+input, button {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #005a9e;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

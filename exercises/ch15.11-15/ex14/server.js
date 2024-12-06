@@ -7,12 +7,23 @@ import url from "node:url";
 // ES Modules で __dirname を取得
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
+// 追記：CORS設定
+function setCorsHeaders(req, res) {
+  const origin = "https://127.0.0.1:5500"; // LiveServer環境からのアクセスを許可
+  res.setHeader("Access-Control-Allow-Origin", origin);
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+}
+
 async function listTasksHandler(_url, _req, res) {
+  setCorsHeaders(_req, res); // 追記：CORS対応ヘッダーを追記
+
   res.writeHead(200, {
     Connection: "keep-alive",
     "Content-Type": "text/event-stream",
     "Cache-Control": "no-cache",
-    "Access-Control-Allow-Origin": "http://localhost:3000",
+    // "Access-Control-Allow-Origin": "http://localhost:3000", // setCorsHeaders(req, res)で対応したのでコメントアウト
   });
 
   setTimeout(() => {
@@ -33,6 +44,8 @@ async function serveContentsHandler(url, _req, res) {
     ".html": "text/html",
     ".js": "text/javascript",
   };
+
+  setCorsHeaders(_req, res); // 追記：CORS対応ヘッダーを設定
 
   try {
     const reqPath = url.pathname;
@@ -73,10 +86,14 @@ function cookieAuthzMiddleware(_url, req, res, params) {
   console.log("session:", sid);
   params.__sid = sid;
 
+  const isSecure = req.headers.origin && req.headers.origin.startsWith("https"); // 追記：HTTPSが使用されている場合のみSecureを設定
+
   // HttpOnly を有効にしてクライアントの JavaScript から Cookie を参照できないようにする
   res.setHeader(
     "Set-Cookie",
-    `sid=${encodeURIComponent(sid)}; Domain=localhost; Path=/; HttpOnly;`,
+    `sid=${encodeURIComponent(sid)}; Domain=localhost; Path=/; HttpOnly; ${
+      isSecure ? "Secure;" : ""
+    }`　// 追記：Secureを追加
   );
   return true;
 }

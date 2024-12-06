@@ -45,85 +45,19 @@
     });
   </script>
 </head>
-<body>
-  <h1>WebSocket Request Sender</h1>
-  <div id="requests">
-    <!-- <div>
-      <input type="text" id="input1" placeholder="Enter request 1">
-      <button id="send1">Send Request 1</button>
-      <div id="response1"></div>
+  <body>
+    <h1>WebSocket Request Sender</h1>
+    <div id="requests">
+      <div>
+        <input type="text" id="input1" placeholder="Enter request 1">
+        <button>Send Request 1</button>
+        <div id="response1"></div>
+      </div>
+      <div>
+        <input type="text" id="input2" placeholder="Enter request 2">
+        <button>Send Request 2</button>
+        <div id="response2"></div>
+      </div>
     </div>
-    <div>
-      <input type="text" id="input2" placeholder="Enter request 2">
-      <button  id="send2">Send Request 2</button>
-      <div id="response2"></div>
-    </div>
-  </div> -->
-  <div>
-    <input type="text" id="input1" placeholder="Enter request 1">
-    <button>Send Request 1</button>
-    <div id="response1"></div>
-  </div>
-  <div>
-    <input type="text" id="input2" placeholder="Enter request 2">
-    <button>Send Request 2</button>
-    <div id="response2"></div>
-  </div>
-
-  <script>
-    // function sendRequest(requestMessage) {
-    //   return new Promise((resolve, reject) => {
-    //     const ws = new WebSocket("ws://localhost:3003");
-
-    //     ws.onopen = () => {
-    //       ws.send(requestMessage);
-    //     };
-
-    //     ws.onmessage = (event) => {
-    //       resolve(event.data);
-    //       ws.close();
-    //     };
-
-    //     ws.onerror = () => {
-    //       reject(new Error("Connection error"));
-    //     };
-
-    //     setTimeout(() => {
-    //       reject(new Error("Timeout: No response received within the specified time."));
-    //       ws.close();
-    //     }, 10000);
-    //   });
-    // }
-
-    // function generateUniqueId() {
-    //   return Math.random().toString(36).substring(2, 11); // 先頭の"0."を削除
-    // }
-
-    // document.getElementById("send1").addEventListener("click", async () => {
-    //   const message = JSON.stringify({
-    //     requestId: generateUniqueId(), // リクエストが複数並行して送信されてもよいように
-    //     content: document.getElementById("input1").value // アクションに応じたデータ処理
-    //   });
-    //   try {
-    //     const response = await sendRequest(message);
-    //     document.getElementById("response1").innerText = "Response: " + JSON.parse(response).content;
-    //   } catch (error) {
-    //     document.getElementById("response1").innerText = "Error: " + error.message;
-    //   }
-    // });
-
-    // document.getElementById("send2").addEventListener("click", async () => {
-    //   const message = JSON.stringify({
-    //     requestId: generateUniqueId(), // リクエストが複数並行して送信されてもよいように
-    //     content: document.getElementById("input2").value // アクションに応じたデータ処理
-    //   });
-    //   try {
-    //     const response = await sendRequest(message);
-    //     document.getElementById("response2").innerText = "Response: " + JSON.parse(response).content;
-    //   } catch (error) {
-    //     document.getElementById("response2").innerText = "Error: " + error.message;
-    //   }
-    // });
-  </script>
-</body>
+  </body>
 </html>

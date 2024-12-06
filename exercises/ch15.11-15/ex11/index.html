@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Fractal Generator</title>
+  </head>
+  <body>
+      <h1>Fractal Generator (Mandelbrot Set)</h1>
+      <canvas id="fractalCanvas" width="800" height="800" style="border: 1px solid black;"></canvas>
+
+      <script>
+          // ワーカーを作成する関数
+          function createWorker() {
+              const blob = new Blob([`(${workerCode.toString()})()`], { type: 'application/javascript' });
+              const url = URL.createObjectURL(blob);
+              const worker = new Worker(url);
+              return worker;
+          }
+
+          // ワーカーコード（提供されたコードを関数内でラップ）
+          function workerCode() {
+              onmessage = function(message) {
+                  const { tile, x0, y0, perPixel, maxIterations } = message.data;
+                  const { width, height } = tile;
+                  const imageData = new ImageData(width, height);
+                  const iterations = new Uint32Array(imageData.data.buffer);
+
+                  let index = 0, max = 0, min = maxIterations;
+                  for (let row = 0, y = y0; row < height; row++, y += perPixel) {
+                      for (let column = 0, x = x0; column < width; column++, x += perPixel) {
+                          let n;
+                          let r = x, i = y;
+                          for (n = 0; n < maxIterations; n++) {
+                              let rr = r * r, ii = i * i;
+                              if (rr + ii > 4) {
+                                  break;
+                              }
+                              i = 2 * r * i + y;
+                              r = rr - ii + x;
+                          }
+                          iterations[index++] = n;
+                          if (n > max) max = n;
+                          if (n < min) min = n;
+                      }
+                  }
+                  postMessage({ tile, imageData, min, max }, [imageData.data.buffer]);
+              };
+          }
+
+          // キャンバスを取得し、描画関数を準備
+          const canvas = document.getElementById('fractalCanvas');
+          const context = canvas.getContext('2d');
+
+          // ワーカーを作成
+          const worker = createWorker();
+
+          // タイルを計算して描画する関数
+          function generateFractal() {
+              const width = canvas.width;
+              const height = canvas.height;
+              const tile = { width, height };
+              const x0 = -2, y0 = -2;
+              const perPixel = 4 / width;
+              const maxIterations = 100;
+
+              worker.postMessage({ tile, x0, y0, perPixel, maxIterations });
+          }
+
+          // ワーカーからメッセージを受信し、キャンバスに描画
+          worker.onmessage = function(e) {
+              const { tile, imageData, min, max } = e.data;
+              context.putImageData(imageData, 0, 0);
+          };
+
+          // フラクタルを生成
+          generateFractal();
+      </script>
+  </body>
+</html>
