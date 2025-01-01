@@ -44,10 +44,8 @@ async function serveContentsHandler(url, _req, res) {
 // CSP のヘッダを返すミドルウェア
 function cspMiddleware(_url, req, res) {
   // TODO: CSP ヘッダを設定する
-  const hash = crypto.createHash('sha256').update('alert("First")').digest('base64');
-  // hash.update("alert(\"First\")");
-  // hash.update('alert("First")');
-  res.setHeader("Content-Security-Policy", `script-src sha256-${hash} http://localhost:3000/hello.js;`); //インラインスクリプを許可する際はhashやnonceを使う
+  const hash = crypto.createHash('sha256').update('alert("RICOH")').digest('base64');
+  res.setHeader("Content-Security-Policy", `script-src 'sha256-${hash}' http://localhost:3000/hello.js;`); //インラインスクリプを許可する際はhashやnonceを使う
   return true;
 }
 
