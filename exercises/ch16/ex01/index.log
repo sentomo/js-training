@@ -1,0 +1,837 @@
+sentomoMBP:ex01 sentomo$ node mFib.js 45 4
+Worker 2 execution time: 2.252s
+Worker 1 execution time: 3.632s
+Worker 3 execution time: 6.205s
+Worker 0 execution time: 22.162s
+Total execution time: 22.175s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 4
+Worker 2 execution time: 2.306s
+Worker 3 execution time: 5.758s
+Worker 1 execution time: 5.880s
+Worker 0 execution time: 9.843s
+Total execution time: 9.852s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 4
+Worker 0 execution time: 2.228s
+Worker 1 execution time: 3.610s
+Worker 2 execution time: 6.115s
+Worker 3 execution time: 18.721s
+Total execution time: 18.734s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 4
+Worker 1 execution time: 2.201s
+Worker 2 execution time: 3.527s
+Worker 3 execution time: 9.273s
+Worker 0 execution time: 10.031s
+Total execution time: 10.040s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 8
+Worker 1 execution time: 662.918ms
+Worker 3 execution time: 870.013ms
+Worker 4 execution time: 1.225s
+Worker 7 execution time: 1.733s
+Worker 5 execution time: 2.446s
+Worker 2 execution time: 3.939s
+Worker 6 execution time: 5.417s
+Worker 0 execution time: 8.338s
+Total execution time: 8.349s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 8
+Worker 0 execution time: 583.28ms
+Worker 3 execution time: 855.958ms
+Worker 5 execution time: 1.746s
+Worker 2 execution time: 2.284s
+Worker 4 execution time: 2.508s
+Worker 7 execution time: 3.716s
+Worker 6 execution time: 8.439s
+Worker 1 execution time: 8.642s
+Total execution time: 8.657s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 8
+Worker 0 execution time: 531.694ms
+Worker 4 execution time: 928.539ms
+Worker 1 execution time: 1.193s
+Worker 2 execution time: 1.849s
+Worker 7 execution time: 2.414s
+Worker 6 execution time: 3.526s
+Worker 3 execution time: 5.455s
+Worker 5 execution time: 17.624s
+Total execution time: 17.663s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 8
+Worker 2 execution time: 548.577ms
+Worker 4 execution time: 760.164ms
+Worker 6 execution time: 1.156s
+Worker 5 execution time: 1.656s
+Worker 3 execution time: 2.388s
+Worker 0 execution time: 3.581s
+Worker 1 execution time: 5.983s
+Worker 7 execution time: 8.183s
+Total execution time: 8.236s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 5 execution time: 353.549ms
+Worker 7 execution time: 346.589ms
+Worker 4 execution time: 381.786ms
+Worker 14 execution time: 327.248ms
+Worker 15 execution time: 332.345ms
+Worker 8 execution time: 426.218ms
+Worker 3 execution time: 530.625ms
+Worker 11 execution time: 603.617ms
+Worker 9 execution time: 734.75ms
+Worker 0 execution time: 1.391s
+Worker 10 execution time: 1.646s
+Worker 6 execution time: 1.948s
+Worker 1 execution time: 2.927s
+Worker 2 execution time: 4.266s
+Worker 13 execution time: 5.544s
+Worker 12 execution time: 8.374s
+Total execution time: 8.474s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 13 execution time: 254.201ms
+Worker 15 execution time: 294.697ms
+Worker 8 execution time: 418.3ms
+Worker 14 execution time: 355.617ms
+Worker 3 execution time: 513.214ms
+Worker 9 execution time: 531.024ms
+Worker 11 execution time: 561.901ms
+Worker 5 execution time: 589.908ms
+Worker 0 execution time: 816.207ms
+Worker 10 execution time: 1.121s
+Worker 7 execution time: 1.496s
+Worker 1 execution time: 2.833s
+Worker 6 execution time: 2.858s
+Worker 12 execution time: 5.843s
+Worker 4 execution time: 6.101s
+Worker 2 execution time: 8.707s
+Total execution time: 8.725s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 0 execution time: 301.263ms
+Worker 12 execution time: 274.897ms
+Worker 14 execution time: 262.406ms
+Worker 8 execution time: 327.664ms
+Worker 13 execution time: 285.212ms
+Worker 15 execution time: 260.406ms
+Worker 9 execution time: 351.822ms
+Worker 6 execution time: 546.589ms
+Worker 7 execution time: 681.245ms
+Worker 10 execution time: 894.697ms
+Worker 11 execution time: 1.240s
+Worker 1 execution time: 1.826s
+Worker 2 execution time: 2.522s
+Worker 4 execution time: 3.730s
+Worker 5 execution time: 5.457s
+Worker 3 execution time: 8.242s
+Total execution time: 8.256s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 5 execution time: 286.423ms
+Worker 12 execution time: 282.641ms
+Worker 14 execution time: 267.452ms
+Worker 13 execution time: 294.809ms
+Worker 10 execution time: 324.482ms
+Worker 15 execution time: 272.058ms
+Worker 11 execution time: 402.381ms
+Worker 8 execution time: 536.292ms
+Worker 9 execution time: 710.734ms
+Worker 0 execution time: 952.405ms
+Worker 1 execution time: 1.393s
+Worker 7 execution time: 1.877s
+Worker 6 execution time: 2.568s
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 10
+Worker 8 execution time: 387.387ms
+Worker 0 execution time: 536.253ms
+Worker 9 execution time: 690.384ms
+Worker 4 execution time: 1.006s
+Worker 2 execution time: 1.279s
+Worker 5 execution time: 1.823s
+Worker 7 execution time: 2.500s
+Worker 6 execution time: 3.659s
+Worker 1 execution time: 5.491s
+Worker 3 execution time: 9.183s
+Total execution time: 9.204s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 10
+Worker 0 execution time: 309.781ms
+Worker 4 execution time: 397.952ms
+Worker 9 execution time: 570.818ms
+Worker 2 execution time: 1.206s
+Worker 6 execution time: 1.185s
+Worker 7 execution time: 1.675s
+Worker 1 execution time: 2.646s
+Worker 8 execution time: 3.520s
+Worker 5 execution time: 5.344s
+Worker 3 execution time: 9.061s
+Total execution time: 9.074s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 10
+Worker 1 execution time: 281.797ms
+Worker 3 execution time: 409.475ms
+Worker 8 execution time: 596.094ms
+Worker 4 execution time: 826.36ms
+Worker 5 execution time: 1.747s
+Worker 7 execution time: 2.528s
+Worker 9 execution time: 2.556s
+Worker 2 execution time: 3.725s
+Worker 6 execution time: 6.119s
+Worker 0 execution time: 8.419s
+Total execution time: 8.427s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 10
+Worker 4 execution time: 282.245ms
+Worker 6 execution time: 372.97ms
+Worker 1 execution time: 641.192ms
+Worker 2 execution time: 794.861ms
+Worker 5 execution time: 1.200s
+Worker 9 execution time: 2.488s
+Worker 8 execution time: 2.937s
+Worker 7 execution time: 3.628s
+Worker 3 execution time: 5.496s
+Worker 0 execution time: 9.406s
+Total execution time: 9.414s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 32
+Worker 1 execution time: 789.573ms
+Worker 13 execution time: 714.553ms
+Worker 2 execution time: 893.958ms
+Worker 18 execution time: 793.056ms
+Worker 3 execution time: 935.948ms
+Worker 23 execution time: 831.122ms
+Worker 20 execution time: 833.417ms
+Worker 19 execution time: 872.39ms
+Worker 14 execution time: 885.386ms
+Worker 31 execution time: 818.546ms
+Worker 4 execution time: 1.032s
+Worker 17 execution time: 921.598ms
+Worker 22 execution time: 927.887ms
+Worker 12 execution time: 973.372ms
+Worker 15 execution time: 944.25ms
+Worker 21 execution time: 977.804ms
+Worker 24 execution time: 1.001s
+Worker 30 execution time: 945.618ms
+Worker 27 execution time: 946.318ms
+Worker 16 execution time: 1.026s
+Worker 26 execution time: 971.539ms
+Worker 29 execution time: 973.476ms
+Worker 25 execution time: 981.299ms
+Worker 28 execution time: 980.986ms
+Worker 5 execution time: 1.219s
+Worker 6 execution time: 1.407s
+Worker 7 execution time: 1.801s
+Worker 8 execution time: 2.383s
+Worker 9 execution time: 2.977s
+Worker 10 execution time: 4.090s
+Worker 11 execution time: 5.819s
+Worker 0 execution time: 8.799s
+Total execution time: 8.810s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 32
+Worker 0 execution time: 468.876ms
+Worker 3 execution time: 605.687ms
+Worker 2 execution time: 743.609ms
+Worker 13 execution time: 693.287ms
+Worker 4 execution time: 799.252ms
+Worker 5 execution time: 861.031ms
+Worker 14 execution time: 808.772ms
+Worker 29 execution time: 759.808ms
+Worker 15 execution time: 845.528ms
+Worker 18 execution time: 890.766ms
+Worker 12 execution time: 938.915ms
+Worker 19 execution time: 938.595ms
+Worker 23 execution time: 954.233ms
+Worker 26 execution time: 927.278ms
+Worker 21 execution time: 1.005s
+Worker 6 execution time: 1.094s
+Worker 24 execution time: 1.013s
+Worker 25 execution time: 974.493ms
+Worker 20 execution time: 1.033s
+Worker 16 execution time: 1.034s
+Worker 17 execution time: 1.060s
+Worker 28 execution time: 1.008s
+Worker 22 execution time: 1.089s
+Worker 30 execution time: 1.031s
+Worker 27 execution time: 1.040s
+Worker 31 execution time: 1.042s
+Worker 7 execution time: 1.484s
+Worker 8 execution time: 1.962s
+Worker 9 execution time: 2.702s
+Worker 10 execution time: 4.208s
+Worker 1 execution time: 9.524s
+Worker 11 execution time: 9.713s
+Total execution time: 9.779s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 32
+Worker 1 execution time: 503.22ms
+Worker 3 execution time: 635.531ms
+Worker 12 execution time: 652.959ms
+Worker 2 execution time: 724.929ms
+Worker 4 execution time: 798.304ms
+Worker 17 execution time: 785.726ms
+Worker 15 execution time: 811.188ms
+Worker 27 execution time: 744.614ms
+Worker 24 execution time: 830.707ms
+Worker 26 execution time: 764.011ms
+Worker 13 execution time: 899.443ms
+Worker 14 execution time: 875.985ms
+Worker 5 execution time: 952.902ms
+Worker 22 execution time: 898.653ms
+Worker 28 execution time: 845.692ms
+Worker 21 execution time: 926.277ms
+Worker 16 execution time: 946.339ms
+Worker 23 execution time: 951.075ms
+Worker 18 execution time: 958.75ms
+Worker 20 execution time: 1.030s
+Worker 25 execution time: 963.748ms
+Worker 19 execution time: 1.043s
+Worker 29 execution time: 963.639ms
+Worker 31 execution time: 967.227ms
+Worker 30 execution time: 970.586ms
+Worker 6 execution time: 1.264s
+Worker 7 execution time: 1.512s
+Worker 8 execution time: 2.115s
+Worker 9 execution time: 2.757s
+Worker 10 execution time: 3.910s
+Worker 11 execution time: 5.687s
+Worker 0 execution time: 8.548s
+Total execution time: 8.557s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 32
+Worker 2 execution time: 535.922ms
+Worker 1 execution time: 617.272ms
+Worker 3 execution time: 668.256ms
+Worker 4 execution time: 735.634ms
+Worker 13 execution time: 745.517ms
+Worker 12 execution time: 812.462ms
+Worker 25 execution time: 735.494ms
+Worker 5 execution time: 934.422ms
+Worker 14 execution time: 855.606ms
+Worker 18 execution time: 903.196ms
+Worker 19 execution time: 904.838ms
+Worker 15 execution time: 905.598ms
+Worker 20 execution time: 921.098ms
+Worker 17 execution time: 947.764ms
+Worker 24 execution time: 948.098ms
+Worker 23 execution time: 973.572ms
+Worker 21 execution time: 986.909ms
+Worker 30 execution time: 946.916ms
+Worker 22 execution time: 1.002s
+Worker 27 execution time: 947.696ms
+Worker 16 execution time: 1.011s
+Worker 31 execution time: 965.928ms
+Worker 26 execution time: 970.055ms
+Worker 29 execution time: 969.904ms
+Worker 28 execution time: 972.556ms
+Worker 6 execution time: 1.181s
+Worker 7 execution time: 1.527s
+Worker 8 execution time: 1.994s
+Worker 10 execution time: 3.840s
+Worker 9 execution time: 3.892s
+Worker 11 execution time: 5.663s
+Worker 0 execution time: 8.530s
+Total execution time: 8.541s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 24
+Worker 4 execution time: 560.472ms
+Worker 10 execution time: 608.005ms
+Worker 16 execution time: 634.071ms
+Worker 14 execution time: 664.743ms
+Worker 2 execution time: 735.333ms
+Worker 19 execution time: 672.788ms
+Worker 15 execution time: 693.805ms
+Worker 22 execution time: 702.373ms
+Worker 21 execution time: 711.224ms
+Worker 12 execution time: 730.615ms
+Worker 18 execution time: 726.149ms
+Worker 13 execution time: 735.176ms
+Worker 20 execution time: 729.046ms
+Worker 17 execution time: 737.144ms
+Worker 1 execution time: 815.621ms
+Worker 23 execution time: 745.603ms
+Worker 6 execution time: 1.025s
+Worker 0 execution time: 1.258s
+Worker 5 execution time: 1.713s
+Worker 8 execution time: 2.039s
+Worker 11 execution time: 3.014s
+Worker 7 execution time: 4.263s
+Worker 9 execution time: 5.698s
+Worker 3 execution time: 8.524s
+Total execution time: 8.541s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 24
+Worker 9 execution time: 534.581ms
+Worker 13 execution time: 574.5ms
+Worker 10 execution time: 595.697ms
+Worker 18 execution time: 522.905ms
+Worker 15 execution time: 535.584ms
+Worker 20 execution time: 538.952ms
+Worker 17 execution time: 564.306ms
+Worker 12 execution time: 668.837ms
+Worker 11 execution time: 675.483ms
+Worker 14 execution time: 642.165ms
+Worker 21 execution time: 595.472ms
+Worker 16 execution time: 597.325ms
+Worker 23 execution time: 607.178ms
+Worker 22 execution time: 616.475ms
+Worker 19 execution time: 637.43ms
+Worker 3 execution time: 958.801ms
+Worker 4 execution time: 970.963ms
+Worker 2 execution time: 1.235s
+Worker 5 execution time: 1.646s
+Worker 0 execution time: 2.050s
+Worker 6 execution time: 2.719s
+Worker 1 execution time: 4.265s
+Worker 8 execution time: 8.518s
+Worker 7 execution time: 8.736s
+Total execution time: 8.783s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 24
+Worker 9 execution time: 425.323ms
+Worker 10 execution time: 526.039ms
+Worker 11 execution time: 603.402ms
+Worker 12 execution time: 652.369ms
+Worker 14 execution time: 628.346ms
+Worker 16 execution time: 611.523ms
+Worker 2 execution time: 736.454ms
+Worker 20 execution time: 606.839ms
+Worker 21 execution time: 606.831ms
+Worker 23 execution time: 608.988ms
+Worker 15 execution time: 619.568ms
+Worker 13 execution time: 676.197ms
+Worker 22 execution time: 643.263ms
+Worker 17 execution time: 650.071ms
+Worker 18 execution time: 650.902ms
+Worker 19 execution time: 650.898ms
+Worker 1 execution time: 899.39ms
+Worker 6 execution time: 1.577s
+Worker 0 execution time: 2.084s
+Worker 4 execution time: 2.273s
+Worker 5 execution time: 3.996s
+Worker 7 execution time: 4.828s
+Worker 3 execution time: 6.350s
+Worker 8 execution time: 8.743s
+Total execution time: 8.793s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 24
+Worker 9 execution time: 358.647ms
+Worker 10 execution time: 454.941ms
+Worker 14 execution time: 458.806ms
+Worker 11 execution time: 581.937ms
+Worker 20 execution time: 540.674ms
+Worker 13 execution time: 591.058ms
+Worker 18 execution time: 560.265ms
+Worker 23 execution time: 527.01ms
+Worker 22 execution time: 536.439ms
+Worker 15 execution time: 637.549ms
+Worker 16 execution time: 640.504ms
+Worker 17 execution time: 640.636ms
+Worker 19 execution time: 643.11ms
+Worker 12 execution time: 691.032ms
+Worker 21 execution time: 656.392ms
+Worker 2 execution time: 901.093ms
+Worker 4 execution time: 1.296s
+Worker 3 execution time: 1.340s
+Worker 5 execution time: 1.639s
+Worker 6 execution time: 2.190s
+Worker 0 execution time: 2.973s
+Worker 1 execution time: 4.640s
+Worker 8 execution time: 8.737s
+Worker 7 execution time: 8.896s
+Total execution time: 8.952s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 18
+Worker 13 execution time: 347.955ms
+Worker 16 execution time: 336.308ms
+Worker 14 execution time: 368.055ms
+Worker 15 execution time: 366.832ms
+Worker 1 execution time: 489.965ms
+Worker 12 execution time: 424.856ms
+Worker 4 execution time: 502.988ms
+Worker 3 execution time: 584.63ms
+Worker 8 execution time: 649.556ms
+Worker 6 execution time: 680.096ms
+Worker 5 execution time: 959.367ms
+Worker 9 execution time: 1.240s
+Worker 11 execution time: 2.094s
+Worker 10 execution time: 2.580s
+Worker 2 execution time: 2.941s
+Worker 7 execution time: 4.115s
+Worker 17 execution time: 8.714s
+Worker 0 execution time: 14.686s
+Total execution time: 14.698s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 18
+Worker 4 execution time: 295.291ms
+Worker 13 execution time: 318.073ms
+Worker 12 execution time: 330.987ms
+Worker 17 execution time: 295.625ms
+Worker 7 execution time: 357.081ms
+Worker 16 execution time: 321.525ms
+Worker 15 execution time: 322.364ms
+Worker 14 execution time: 340.569ms
+Worker 9 execution time: 419.826ms
+Worker 5 execution time: 508.243ms
+Worker 8 execution time: 679.324ms
+Worker 0 execution time: 931.963ms
+Worker 1 execution time: 1.309s
+Worker 11 execution time: 1.929s
+Worker 2 execution time: 3.705s
+Worker 6 execution time: 3.746s
+Worker 3 execution time: 5.552s
+Worker 10 execution time: 8.332s
+Total execution time: 8.396s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 18
+Worker 17 execution time: 252.811ms
+Worker 8 execution time: 366.868ms
+Worker 2 execution time: 438.313ms
+Worker 16 execution time: 338.744ms
+Worker 13 execution time: 396.308ms
+Worker 12 execution time: 409.206ms
+Worker 15 execution time: 354.822ms
+Worker 14 execution time: 373.041ms
+Worker 6 execution time: 474.111ms
+Worker 9 execution time: 593.036ms
+Worker 10 execution time: 749.362ms
+Worker 3 execution time: 1.016s
+Worker 7 execution time: 1.335s
+Worker 1 execution time: 1.946s
+Worker 11 execution time: 2.626s
+Worker 0 execution time: 3.820s
+Worker 4 execution time: 5.561s
+Worker 5 execution time: 17.855s
+Total execution time: 17.886s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 18
+Worker 2 execution time: 415.04ms
+Worker 6 execution time: 433.003ms
+Worker 16 execution time: 340.485ms
+Worker 10 execution time: 434.721ms
+Worker 15 execution time: 375.37ms
+Worker 12 execution time: 450.798ms
+Worker 14 execution time: 421.349ms
+Worker 13 execution time: 465.58ms
+Worker 17 execution time: 429.636ms
+Worker 8 execution time: 513.341ms
+Worker 4 execution time: 763.501ms
+Worker 7 execution time: 1.318s
+Worker 9 execution time: 1.430s
+Worker 0 execution time: 1.953s
+Worker 11 execution time: 2.723s
+Worker 3 execution time: 4.086s
+Worker 1 execution time: 5.540s
+Worker 5 execution time: 8.396s
+Total execution time: 8.426s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 18
+Worker 8 execution time: 211.187ms
+Worker 5 execution time: 316.08ms
+Worker 13 execution time: 310.933ms
+Worker 14 execution time: 311.685ms
+Worker 12 execution time: 364.462ms
+Worker 17 execution time: 324.798ms
+Worker 16 execution time: 337.074ms
+Worker 15 execution time: 342.534ms
+Worker 9 execution time: 580.014ms
+Worker 1 execution time: 666.81ms
+Worker 2 execution time: 732.278ms
+Worker 10 execution time: 1.051s
+Worker 6 execution time: 1.303s
+Worker 0 execution time: 1.866s
+Worker 7 execution time: 2.538s
+Worker 3 execution time: 4.012s
+Worker 11 execution time: 5.418s
+Worker 4 execution time: 9.193s
+Total execution time: 9.212s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 17
+Worker 16 execution time: 370.75ms
+Worker 12 execution time: 387.408ms
+Worker 14 execution time: 381.018ms
+Worker 15 execution time: 391.606ms
+Worker 13 execution time: 410.93ms
+Worker 10 execution time: 443.823ms
+Worker 2 execution time: 599.529ms
+Worker 3 execution time: 628.51ms
+Worker 8 execution time: 685.42ms
+Worker 0 execution time: 1.123s
+Worker 11 execution time: 1.095s
+Worker 1 execution time: 1.452s
+Worker 9 execution time: 2.764s
+Worker 4 execution time: 2.872s
+Worker 6 execution time: 3.931s
+Worker 7 execution time: 5.644s
+Worker 5 execution time: 8.496s
+Total execution time: 8.522s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 17
+Worker 12 execution time: 260.643ms
+Worker 15 execution time: 257.768ms
+Worker 2 execution time: 379.379ms
+Worker 16 execution time: 270.918ms
+Worker 13 execution time: 309.463ms
+Worker 14 execution time: 285.23ms
+Worker 5 execution time: 381.952ms
+Worker 7 execution time: 379.316ms
+Worker 8 execution time: 462.288ms
+Worker 10 execution time: 674.711ms
+Worker 9 execution time: 900.258ms
+Worker 0 execution time: 1.309s
+Worker 6 execution time: 1.931s
+Worker 1 execution time: 2.559s
+Worker 11 execution time: 3.621s
+Worker 3 execution time: 5.978s
+Worker 4 execution time: 9.191s
+Total execution time: 9.211s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 17
+Worker 4 execution time: 315.893ms
+Worker 13 execution time: 310.1ms
+Worker 14 execution time: 307.09ms
+Worker 16 execution time: 306.622ms
+Worker 12 execution time: 341.518ms
+Worker 15 execution time: 313.428ms
+Worker 7 execution time: 420.873ms
+Worker 8 execution time: 420.661ms
+Worker 9 execution time: 572.747ms
+Worker 6 execution time: 735.002ms
+Worker 11 execution time: 984.045ms
+Worker 10 execution time: 1.265s
+Worker 0 execution time: 2.005s
+Worker 5 execution time: 2.499s
+Worker 1 execution time: 3.747s
+Worker 2 execution time: 5.460s
+Worker 3 execution time: 9.202s
+Total execution time: 9.216s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 17
+Worker 12 execution time: 314.073ms
+Worker 14 execution time: 298.32ms
+Worker 8 execution time: 355.004ms
+Worker 15 execution time: 281.973ms
+Worker 13 execution time: 335.485ms
+Worker 16 execution time: 292.632ms
+Worker 2 execution time: 452.092ms
+Worker 5 execution time: 429.912ms
+Worker 6 execution time: 569.586ms
+Worker 9 execution time: 1.004s
+Worker 7 execution time: 1.449s
+Worker 11 execution time: 1.459s
+Worker 0 execution time: 2.727s
+Worker 10 execution time: 3.169s
+Worker 1 execution time: 3.836s
+Worker 3 execution time: 5.663s
+Worker 4 execution time: 8.543s
+Total execution time: 8.563s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 15
+Worker 12 execution time: 230.598ms
+Worker 14 execution time: 193.155ms
+Worker 4 execution time: 303.09ms
+Worker 5 execution time: 333.917ms
+Worker 7 execution time: 377.489ms
+Worker 11 execution time: 457.922ms
+Worker 0 execution time: 583.646ms
+Worker 10 execution time: 701.246ms
+Worker 9 execution time: 956.861ms
+Worker 8 execution time: 1.293s
+Worker 1 execution time: 1.859s
+Worker 2 execution time: 2.546s
+Worker 3 execution time: 3.693s
+Worker 6 execution time: 8.309s
+Worker 13 execution time: 10.358s
+Total execution time: 10.447s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 15
+Worker 1 execution time: 277.248ms
+Worker 14 execution time: 202.001ms
+Worker 12 execution time: 242.253ms
+Worker 13 execution time: 239.325ms
+Worker 11 execution time: 289.337ms
+Worker 2 execution time: 447.681ms
+Worker 10 execution time: 470.618ms
+Worker 8 execution time: 697.324ms
+Worker 0 execution time: 1.301s
+Worker 3 execution time: 1.312s
+Worker 4 execution time: 1.787s
+Worker 5 execution time: 2.501s
+Worker 7 execution time: 3.659s
+Worker 9 execution time: 5.432s
+Worker 6 execution time: 8.249s
+Total execution time: 8.292s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 15
+Worker 12 execution time: 187.613ms
+Worker 6 execution time: 259.801ms
+Worker 14 execution time: 217.099ms
+Worker 13 execution time: 233.474ms
+Worker 8 execution time: 369.037ms
+Worker 10 execution time: 540.818ms
+Worker 7 execution time: 677.837ms
+Worker 9 execution time: 708.521ms
+Worker 11 execution time: 903.635ms
+Worker 1 execution time: 1.331s
+Worker 0 execution time: 1.821s
+Worker 3 execution time: 2.752s
+Worker 2 execution time: 3.673s
+Worker 5 execution time: 8.366s
+Worker 4 execution time: 9.456s
+Total execution time: 9.477s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 15
+Worker 5 execution time: 228.665ms
+Worker 12 execution time: 221.976ms
+Worker 13 execution time: 221.845ms
+Worker 14 execution time: 209.752ms
+Worker 9 execution time: 311.859ms
+Worker 10 execution time: 399.285ms
+Worker 11 execution time: 533.958ms
+Worker 0 execution time: 893.338ms
+Worker 2 execution time: 1.217s
+Worker 6 execution time: 1.521s
+Worker 8 execution time: 1.994s
+Worker 1 execution time: 2.752s
+Worker 3 execution time: 4.272s
+Worker 4 execution time: 5.674s
+Worker 7 execution time: 9.375s
+Total execution time: 9.421s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ 
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 3 execution time: 292.042ms
+Worker 12 execution time: 264.627ms
+Worker 13 execution time: 271.286ms
+Worker 14 execution time: 252.828ms
+Worker 15 execution time: 243.755ms
+Worker 9 execution time: 396.72ms
+Worker 7 execution time: 413.47ms
+Worker 11 execution time: 668.644ms
+Worker 10 execution time: 876.445ms
+Worker 6 execution time: 933.649ms
+Worker 8 execution time: 1.295s
+Worker 1 execution time: 1.853s
+Worker 2 execution time: 2.631s
+Worker 0 execution time: 3.831s
+Worker 5 execution time: 5.509s
+Worker 4 execution time: 8.383s
+Total execution time: 8.404s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 13 execution time: 230.084ms
+Worker 12 execution time: 254.161ms
+Worker 0 execution time: 329.712ms
+Worker 14 execution time: 259.723ms
+Worker 15 execution time: 262.201ms
+Worker 1 execution time: 431.623ms
+Worker 4 execution time: 438.719ms
+Worker 2 execution time: 636.322ms
+Worker 9 execution time: 784.634ms
+Worker 10 execution time: 1.060s
+Worker 3 execution time: 1.467s
+Worker 8 execution time: 1.898s
+Worker 7 execution time: 2.547s
+Worker 5 execution time: 3.775s
+Worker 11 execution time: 5.564s
+Worker 6 execution time: 8.396s
+Total execution time: 8.434s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 4 execution time: 312.211ms
+Worker 12 execution time: 252.027ms
+Worker 14 execution time: 268.881ms
+Worker 13 execution time: 287.95ms
+Worker 8 execution time: 333.334ms
+Worker 15 execution time: 270.427ms
+Worker 3 execution time: 452.288ms
+Worker 5 execution time: 547.19ms
+Worker 2 execution time: 720.186ms
+Worker 6 execution time: 923.997ms
+Worker 7 execution time: 1.293s
+Worker 9 execution time: 1.780s
+Worker 11 execution time: 2.470s
+Worker 0 execution time: 3.649s
+Worker 10 execution time: 5.372s
+Worker 1 execution time: 8.255s
+Total execution time: 8.266s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ node mFib.js 45 16
+Worker 13 execution time: 219.897ms
+Worker 4 execution time: 297.512ms
+Worker 5 execution time: 287.485ms
+Worker 14 execution time: 221.843ms
+Worker 12 execution time: 244.357ms
+Worker 6 execution time: 346.518ms
+Worker 7 execution time: 364.634ms
+Worker 8 execution time: 519.383ms
+Worker 9 execution time: 711.161ms
+Worker 11 execution time: 860.81ms
+Worker 10 execution time: 1.268s
+Worker 0 execution time: 1.775s
+Worker 1 execution time: 2.485s
+Worker 2 execution time: 4.027s
+Worker 3 execution time: 5.541s
+Worker 15 execution time: 8.304s
+Total execution time: 8.415s
+Fibonacci number: 1836311902
+^C
+sentomoMBP:ex01 sentomo$ 
