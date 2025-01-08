@@ -1,0 +1,55 @@
+## 実行ログ
+sentomoMBP:ch16 sentomo$ ./ex08/github-issue-cli.js -h
+
+Usage: github-issue-cli <command> [options]
+
+Commands:
+  create <owner> <repo> <title> [body]  Create a new issue
+  close <owner> <repo> <issueNumber>    Close an existing issue
+  list <owner> <repo>                  List open issues
+
+Options:
+  -v, --verbose   Enable verbose HTTP logging
+  -h, --help      Show help
+
+
+sentomoMBP:ch16 sentomo$ ./ex08/github-issue-cli.js create sentomo js-training "Test Issue" "I\'m having a problem with this."
+Issue created successfully:
+ID: 2775664229, Title: Test Issue
+
+sentomoMBP:ch16 sentomo$ ./ex08/github-issue-cli.js list sentomo js-training
+Open Issues:
+ID: 2775664229, Title: Test Issue
+
+sentomoMBP:ch16 sentomo$ ./ex08/github-issue-cli.js close sentomo js-training 29
+Issue closed successfully:
+ID: 2775664229, Title: Test Issue
+
+sentomoMBP:ch16 sentomo$ ./ex08/github-issue-cli.js create sentomo js-training "Test Issue2" "I\'m having a problem with this." -v
+Request Options: {
+  method: 'POST',
+  headers: {
+    Authorization: 'token xxxxxxxxx',
+    'User-Agent': 'github-issue-cli',
+    'Content-Type': 'application/json'
+  }
+}
+Request URL: https://api.github.com/repos/sentomo/js-training/issues
+Request Body: { title: 'Test Issue2', body: "I\\'m having a problem with this." }
+Issue created successfully:
+ID: 2775677612, Title: Test Issue2
+
+sentomoMBP:ch16 sentomo$ ./ex08/github-issue-cli.js close sentomo js-training 30 --verbose
+Request Options: {
+  method: 'PATCH',
+  headers: {
+    Authorization: 'token xxxxxxxxx',
+    'User-Agent': 'github-issue-cli',
+    'Content-Type': 'application/json'
+  }
+}
+Request URL: https://api.github.com/repos/sentomo/js-training/issues/30
+Request Body: { state: 'closed' }
+Issue closed successfully:
+ID: 2775677612, Title: Test Issue2
+sentomoMBP:ch16 sentomo$ 
