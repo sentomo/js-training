@@ -5,7 +5,7 @@ describe('Express Server', () => {
   it('静的ファイルを提供する', async () => {
     const response = await request(app).get('/test.txt');
     expect(response.status).toBe(200);
-    expect(response.text).toBe('Hello, World!');
+    expect(response.text).toBe('test!');
   });
 
   it('ミラーエンドポイントの時はリクエストをそのまま返す', async () => {
